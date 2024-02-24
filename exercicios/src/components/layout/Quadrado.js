@@ -7,6 +7,7 @@ export default (props) => {
         Quadrado: {
             height: 50,
             width: 50,
+            padding: 20,
             backgroundColor: props.cor || "#000",
         }
     })
