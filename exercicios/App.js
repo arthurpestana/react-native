@@ -1,7 +1,8 @@
 import React from 'react'
-import { SafeAreaView, StyleSheet } from 'react-native'
+import { SafeAreaView, StyleSheet, StatusBar } from 'react-native'
 
-import Mega from './src/components/mega/Mega'
+import Calculadora from './desafios/calculadora-app/Calculadora'
+//import Mega from './src/components/mega/Mega'
 //import FlexboxV4 from './src/components/layout/FlexboxV4'
 //import FlexboxV3 from './src/components/layout/FlexboxV3'
 //import FlexboxV2 from './src/components/layout/FlexboxV2'
@@ -27,8 +28,16 @@ import Mega from './src/components/mega/Mega'
 
 export default () => (
   <SafeAreaView style={style.App}>
-    <Mega qntnumeros={10}/>
+    <StatusBar
+      barStyle = "dark-content"
+      hidden = {false}
+      backgroundColor = "#0066CC"
+      translucent = {false}
+      networkActivityIndicatorVisible = {true}
+    />
+    <Calculadora/>
     {/*
+    <Mega qntnumeros={10}/>
     <FlexboxV4 />
     <FlexboxV3 />
     <FlexboxV2 />
@@ -74,7 +83,5 @@ const style = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    margin: 20,
-    padding: 20,
   }
 })
