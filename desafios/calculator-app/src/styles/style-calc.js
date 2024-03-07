@@ -5,6 +5,7 @@ export default StyleSheet.create ({
     calc__box: {
         width: `100%`,
         height: `100%`,
+        maxWidth: '425px',
         backgroundColor: "#1C1C1E",
         display: 'flex',
         alignItems: 'center',
@@ -19,7 +20,8 @@ export default StyleSheet.create ({
 
     calc__diplay: {
         width: '85vw',
-        height: '10vh',
+        height: '12vh',
+        maxWidth: '380px',
         borderRadius: 20,
         backgroundColor: '#2e2e30',
         display: 'flex',
@@ -29,7 +31,7 @@ export default StyleSheet.create ({
     },
 
     display__text: {
-        fontSize: 20,
+        fontSize: 28,
         color: '#f0f0f0',
         fontWeight: 400,
     },
@@ -37,11 +39,11 @@ export default StyleSheet.create ({
     calc__buttonBox: {
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         flexWrap: 'wrap',
         marginTop: 10,
-        paddingLeft: 30,
-        paddingRight: 30,
+        paddingLeft: 20,
+        paddingRight: 20,
     },
 
     calc__button: {
@@ -54,7 +56,22 @@ export default StyleSheet.create ({
         alignItems: 'center',
         justifyContent: 'center',
         cursor: 'pointer',
-        margin: 5,
+        margin: 10,
+        marginLeft: 15,
+        marginRight: 15,
+    },
+
+    button__double: {
+        width: '140px',
+        height: '55px',
+    },
+
+    button__resul: {
+        backgroundColor: "#b17a03",
+    },
+
+    button__operation: {
+        color: "#e09d0a",
     },
 
     button__text: {
@@ -62,5 +79,5 @@ export default StyleSheet.create ({
         color: "#f0f0f0",
         fontWeight: '500',
         cursor: 'pointer',
-    }
+    },
 })
