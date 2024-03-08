@@ -109,24 +109,34 @@ export default class App extends React.Component {
                     <Display value={this.state.displayValue}/>
                 </div>
                 <div style={styles.calc__buttonBox}>
-                    <Buttons title='AC' value={'ac'} style_operation style_double onClick={this.clearMemory}/>
-                    <Buttons title='%' value={'%'} style_operation onClick={this.setOperation}/>
-                    <Buttons title='/' value={'/'} style_operation onClick={this.setOperation}/>
-                    <Buttons title='7' value={7} onClick={this.addDigit}/>
-                    <Buttons title='8' value={8} onClick={this.addDigit}/>
-                    <Buttons title='9' value={9} onClick={this.addDigit}/>
-                    <Buttons title='x' value={'*'} style_operation onClick={this.setOperation}/>
-                    <Buttons title='4' value={4} onClick={this.addDigit}/>
-                    <Buttons title='5' value={5} onClick={this.addDigit}/>
-                    <Buttons title='6' value={6} onClick={this.addDigit}/>
-                    <Buttons title='-' value={'-'} style_operation onClick={this.setOperation}/>
-                    <Buttons title='1' value={1} onClick={this.addDigit}/>
-                    <Buttons title='2' value={2} onClick={this.addDigit}/>
-                    <Buttons title='3' value={3} onClick={this.addDigit}/>
-                    <Buttons title='+' value={'+'} style_operation onClick={this.setOperation}/>
-                    <Buttons title='0' value={0} onClick={this.addDigit} style_double/>
-                    <Buttons title=',' value={'.'} onClick={this.addDigit}/>
-                    <Buttons title='=' value={'='} style_resul onClick={this.calcResul}/>
+                    <div style={styles.calc__buttonBox}>
+                        <Buttons title='AC' value={'ac'} style_operation style_double onClick={this.clearMemory}/>
+                        <Buttons title='%' value={'%'} style_operation onClick={this.setOperation}/>
+                        <Buttons title='/' value={'/'} style_operation onClick={this.setOperation}/>
+                    </div>
+                    <div style={styles.calc__buttonBox}>
+                        <Buttons title='7' value={7} onClick={this.addDigit}/>
+                        <Buttons title='8' value={8} onClick={this.addDigit}/>
+                        <Buttons title='9' value={9} onClick={this.addDigit}/>
+                        <Buttons title='x' value={'*'} style_operation onClick={this.setOperation}/>
+                    </div>
+                    <div style={styles.calc__buttonBox}>
+                        <Buttons title='4' value={4} onClick={this.addDigit}/>
+                        <Buttons title='5' value={5} onClick={this.addDigit}/>
+                        <Buttons title='6' value={6} onClick={this.addDigit}/>
+                        <Buttons title='-' value={'-'} style_operation onClick={this.setOperation}/>
+                    </div>
+                    <div style={styles.calc__buttonBox}>
+                        <Buttons title='1' value={1} onClick={this.addDigit}/>
+                        <Buttons title='2' value={2} onClick={this.addDigit}/>
+                        <Buttons title='3' value={3} onClick={this.addDigit}/>
+                        <Buttons title='+' value={'+'} style_operation onClick={this.setOperation}/>
+                    </div>
+                    <div style={styles.calc__buttonBox}>
+                        <Buttons title='0' value={0} onClick={this.addDigit} style_double/>
+                        <Buttons title=',' value={'.'} onClick={this.addDigit}/>
+                        <Buttons title='=' value={'='} style_resul onClick={this.calcResul}/>
+                    </div>
                 </div>
                 <StatusBar style="auto" />
             </SafeAreaView>

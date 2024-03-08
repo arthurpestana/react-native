@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button, Pressable, Text, View} from 'react-native'
+import {Button, Pressable, Text, View, TouchableOpacity } from 'react-native'
 
 import styles from '../styles/style-calc'
 
@@ -16,9 +16,9 @@ export default (props) => {
 
     return (
         <View>
-            <Pressable onPress={() => props.onClick(props.value)} style={stylesButton}>
+            <TouchableOpacity onPress={() => props.onClick(props.value)} style={stylesButton}>
                 <Text style={stylesTextButton}>{props.title}</Text>
-            </Pressable>
+            </TouchableOpacity>
         </View>
     )
 }

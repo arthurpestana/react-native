@@ -5,7 +5,7 @@ export default StyleSheet.create ({
     calc__box: {
         width: `100%`,
         height: `100%`,
-        maxWidth: '425px',
+        
         backgroundColor: "#1C1C1E",
         display: 'flex',
         alignItems: 'center',
