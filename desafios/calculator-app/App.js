@@ -52,6 +52,14 @@ export default class App extends React.Component {
             this.display_values = 0
             this.setState({displayValue: this.display_values.toString().replace(".", ",")})
         }
+        if (this.resul != 0) {
+            console.warn(this.resul)
+            this.num1 = this.resul
+            this.op = operation
+            this.resul = 0
+            this.numbers = []
+        }
+        if (this.numbers.length == 0) {this.op = operation}
         if (this.op == false) {
             this.num1 = Number(this.numbers.join(''))
             this.op = operation
@@ -65,14 +73,6 @@ export default class App extends React.Component {
             this.op = operation
             this.numbers = []
         }
-        if (this.resul != 0) {
-            console.warn(this.resul)
-            this.num1 = this.resul
-            this.op = operation
-            this.resul = 0
-            this.numbers = []
-        }
-
     }
 
     calcOperation = (op, n1, n2) => {
