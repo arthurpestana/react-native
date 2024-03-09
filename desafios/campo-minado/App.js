@@ -2,6 +2,7 @@ import React from "react";
 import {SafeAreaView, View, Text, TouchableOpacity} from 'react-native'
 
 import styles from './src/styles/style_app'
+import Field from './src/components/Field'
 
 export default class App extends React.Component {
     constructor() {
@@ -10,8 +11,13 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <SafeAreaView>
+            <SafeAreaView style={styles.container_app}>
+                <View style={styles.app__header}>
+                    <Text>Campo Minado</Text>
+                </View>
+                <View style={styles.app_main}>
 
+                </View>
             </SafeAreaView>
         )
     }
