@@ -13,10 +13,10 @@ export default class App extends React.Component {
         return (
             <SafeAreaView style={styles.container_app}>
                 <View style={styles.app__header}>
-                    <Text>Campo Minado</Text>
+                    <Text style={styles.header__title}>Campo Minado</Text>
                 </View>
-                <View style={styles.app_main}>
-
+                <View style={styles.app__main}>
+                    <Field difficult={1}/>
                 </View>
             </SafeAreaView>
         )
