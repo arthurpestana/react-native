@@ -26,27 +26,32 @@ export default StyleSheet.create ({
         alignItems: 'center',
         justifyContent: 'center',
         width: '100%',
-        height: 'auto',
         borderRadius: 10,
         borderColor: "#000",
         borderWidth: 3,
-        marginHorizontal: 20,
+        margin: 20,
+        flexDirection: 'row',
+        flexWrap: 'wrap',  
+        paddingVertical: 10, 
+        backgroundColor: 'white'
     },
 
     field: {
-        display: 'flex',
+        flex: 1,
+        flexWrap: 'wrap',
+        flexDirection: 'row',
     },
 
     field__button: {
-        width: '10px',
-        height: '10px',
+        width: '35px',
+        height: '35px',
         backgroundColor: '#AAD751',
         borderWidth: '1px',
         borderColor: '#000',
-        marginHorizontal: '1px',
+        margin: '1px',
     },
 
     alt_color: {
-        backgroundColor: '#A2D149',
+        backgroundColor: '#8ebd35',
     },
 })

@@ -16,7 +16,7 @@ export default class App extends React.Component {
                     <Text style={styles.header__title}>Campo Minado</Text>
                 </View>
                 <View style={styles.app__main}>
-                    <Field difficult={1}/>
+                    <Field style={styles.field} difficult={1}/>
                 </View>
             </SafeAreaView>
         )
