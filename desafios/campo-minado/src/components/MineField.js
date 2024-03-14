@@ -9,7 +9,7 @@ export default (props) => {
     if(props.alt_color) stylesButton.push(styles.alt_color)
 
     return (
-        <TouchableOpacity style={stylesButton} onPress={() => {console.warn(props.x, props.y)}}>
+        <TouchableOpacity style={stylesButton} onPress={() => props.onClick(props.x, props.y)}>
 
         </TouchableOpacity>
     )

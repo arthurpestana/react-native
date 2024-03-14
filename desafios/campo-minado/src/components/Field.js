@@ -6,7 +6,7 @@ import styles from '../styles/style_app'
 
 export default (props) => {
 
-    let bombs = 10
+    let quant_bombs = 10
     let tam = 10
     let alt_color = 0 
     let row_color = 0
@@ -16,6 +16,52 @@ export default (props) => {
     if (props.difficult == 1) {
         bombs = 10
         tam = 10
+    }
+
+    mineBomb = (x, y) => {
+        console.warn(props.x, props.y)
+        console.warn("Você perdeu!")
+    }
+
+    randomBombs = () => {
+        let bomb_x
+        let bomb_y
+        let bombs = []
+
+        for (i=0; i<quant_bombs; i++) {
+            bomb_x = Math.floor(Math.random() * ((tam-1)-0+1)+0)
+            bomb_y = Math.floor(Math.random() * ((tam-1)-0+1)+0)
+            bombs.push(`${bomb_x}, ${bomb_y}`)
+            field_game[bomb_x][bomb_y] = <MineField x={bomb_x} y={bomb_y} bombs/>
+            console.warn(bomb_x, bomb_y)
+        }
+    }
+
+    verifyCoord = (i, j) => {
+        if (i >= 0 & i < tam * j >=0 & j < tam) {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+
+    verifyBomb = (i, j) => {
+        if (verifyCoord(i, j)) {
+            if (`${i},${j}` in bombs) {
+                
+            }
+        }
+        return false
+    }
+
+    contBombsAround = () => {
+        let quant = 0
+        for (i=0; i<tam; i++) {
+            for (j=0; j<=tam; j++) {
+                quant += verifyBomb(i, j)
+            }
+        }
     }
 
     for (let i=0; i<tam; i++) {
@@ -54,6 +100,8 @@ export default (props) => {
     renderField = (button_field) => {
         return button_field
     }
+
+    randomBombs()
 
     return (
         <React.Fragment>
