@@ -49,6 +49,9 @@ export default StyleSheet.create ({
         borderWidth: '1px',
         borderColor: '#000',
         margin: '1px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
 
     alt_color: {
